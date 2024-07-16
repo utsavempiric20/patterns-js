@@ -1,34 +1,35 @@
-let n = 5;
 let c = 1;
+let n = 3;
+
 for (let i = 0; i < n; i++) {
-  let half = (n - 1) / 2;
-  let spaces = "";
   let stars = "";
 
-  if (i > half) {
-    for (let sp = 0; sp < i - half; sp++) {
-      spaces += " ";
-    }
-    for (let p = 0; p < n - i; p++) {
-      stars += c;
-      c++;
-    }
-    for (let q = half; q <= n - i; q++) {
-      stars += c;
-      c++;
-    }
-  } else {
-    for (let sj = i; sj <= half - 1; sj++) {
-      spaces += " ";
-    }
-    for (let j = 0; j <= i; j++) {
-      stars += c;
-      c++;
-    }
-    for (let m = 1; m <= i; m++) {
-      stars += c;
-      c++;
-    }
+  for (let sj = 0; sj < n - i - 1; sj++) {
+    stars += " ";
   }
-  console.log(spaces + stars);
+  for (let j = 0; j <= i; j++) {
+    stars += c;
+    c++;
+  }
+  for (let p = 1; p <= i; p++) {
+    stars += c;
+    c++;
+  }
+  console.log(stars);
+}
+
+for (let i = 0; i < n; i++) {
+  let stars = "";
+  for (let sm = 0; sm <= i; sm++) {
+    stars += " ";
+  }
+  for (let m = 0; m < n - i - 1; m++) {
+    stars += c;
+    c++;
+  }
+  for (let p = n + 1; p < n * 2 - i - 1; p++) {
+    stars += c;
+    c++;
+  }
+  console.log(stars);
 }
