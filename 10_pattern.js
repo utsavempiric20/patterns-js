@@ -18,16 +18,17 @@ for (let i = 0; i < n; i++) {
   console.log(stars);
 }
 
-for (let i = 0; i < n; i++) {
+for (let i = n - 2; i >= 0; i--) {
   let stars = "";
-  for (let sm = 0; sm <= i; sm++) {
+
+  for (let sj = 0; sj < n - i - 1; sj++) {
     stars += " ";
   }
-  for (let m = 0; m < n - i - 1; m++) {
+  for (let j = 0; j <= i; j++) {
     stars += c;
     c++;
   }
-  for (let p = n + 1; p < n * 2 - i - 1; p++) {
+  for (let p = 1; p <= i; p++) {
     stars += c;
     c++;
   }

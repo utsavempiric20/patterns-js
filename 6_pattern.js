@@ -1,4 +1,4 @@
-let n = 3;
+let n = 10;
 
 for (let i = 0; i < n; i++) {
   let stars = "";
@@ -6,24 +6,33 @@ for (let i = 0; i < n; i++) {
   for (let sj = 0; sj < n - i - 1; sj++) {
     stars += " ";
   }
-  for (let j = 0; j <= i; j++) {
-    if (i == j) stars += "*";
+  stars += "*";
+  for (let j = 0; j < i; j++) {
+    stars += " ";
   }
-  //   for (let p = 1; p <= i; p++) {
-  //     if (p == i) stars += "*";
-  //   }
+  for (let p = 1; p < i; p++) {
+    stars += " ";
+  }
+  if (i > 0) {
+    stars += "*";
+  }
   console.log(stars);
 }
 
-for (let i = 0; i < n; i++) {
+for (let i = n - 2; i >= 0; i--) {
   let stars = "";
-  for (let sm = 0; sm <= i; sm++) {
+
+  for (let sj = 0; sj < n - i - 1; sj++) {
     stars += " ";
   }
-  for (let m = 1; m < n - i; m++) {
-    if (i == m) stars += "*";
+  stars += "*";
+  for (let j = 0; j < i; j++) {
+    stars += " ";
   }
-  for (let p = n + 1; p < n * 2 - i - 1; p++) {
+  for (let p = 1; p < i; p++) {
+    stars += " ";
+  }
+  if (i > 0) {
     stars += "*";
   }
   console.log(stars);
